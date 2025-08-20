@@ -17,11 +17,9 @@ for name in os.listdir(SRC_DIR):
     px = im.load()
 
     for y in range(h):
-        row_has_content = any(px[x, y][3] == 255 for x in range(w))
-        if not row_has_content:
-            continue
         for x in range(w):
-            if px[x, y][3] < 255:
+            r, g, b, a = px[x, y]
+            if a < 255:
                 px[x, y] = FILL_COLOR
 
     out_path = os.path.join(DST_DIR, name)
