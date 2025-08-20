@@ -7,7 +7,7 @@ SRC_DIR = "input"
 DST_DIR = "out"
 TARGET_HEX = "0b0d0d"
 REPLACEMENT = (0, 0, 0, 0)
-FUZZ = 0.02
+FUZZ = 0.08
 TRIM_ALPHA_THRESHOLD = 1
 
 
